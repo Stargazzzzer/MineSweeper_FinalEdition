@@ -132,6 +132,7 @@ public class Loader implements InputListener, Listenable<GameStatusListener> {
             temp = in.readLine();
             counter = Integer.parseInt(temp);
             in.close();
+            gameFrame.getScoreBoard().onPlayerChanged(index);
 
             this.gameStatus = GameStatus.PROGRESSING;
 
