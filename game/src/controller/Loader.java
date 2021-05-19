@@ -114,6 +114,8 @@ public class Loader implements InputListener, Listenable<GameStatusListener> {
                     rec = temp.split(" ");
                     gameBoard.getSquare(i, j).setStatus(Integer.parseInt(rec[0]));
                     if (Integer.parseInt(rec[1]) == 1) {
+                        if (gameBoard.getSquare(i, j).hasMine())
+                            gameBoard.setMineLeft(gameBoard.getMineLeft() - 1);
                         final int finalI = i;
                         final int finalJ = j;
                         gameBoard.getSquare(finalI, finalJ).click();
