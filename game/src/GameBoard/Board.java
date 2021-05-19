@@ -85,7 +85,7 @@ public class Board implements Listenable<BoardListener> {
                 }
             }
         }
-
+        
         listenerList.forEach(BoardListener::onBoardReload);
     }
 

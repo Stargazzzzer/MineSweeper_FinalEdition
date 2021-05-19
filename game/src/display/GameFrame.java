@@ -70,7 +70,6 @@ public class GameFrame extends JFrame implements Listenable<InputListener> {
         quitgame.addActionListener(new ReturnToMenuListener());
 
         restart.addActionListener(event -> new ButtonPlayer("game/src/view/sounds/MenuClick.wav"));
-        restart.addActionListener(event -> boardComponent.onBoardReload());
         restart.addActionListener(event -> listenerList.forEach(InputListener::onGameRestart));
 
         cheat.addActionListener(event -> new ButtonPlayer("game/src/view/sounds/MenuClick.wav"));
