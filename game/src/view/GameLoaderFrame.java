@@ -94,7 +94,6 @@ public class GameLoaderFrame extends JFrame {
                 File toDelete = new File("game/src/controller/out/" + selectBox.getSelectedItem().toString());
                 if (toDelete.exists()) {
                     toDelete.delete();
-
                     JOptionPane.showMessageDialog(null, "File deleted!", "", JOptionPane.PLAIN_MESSAGE);
                 }
             }
