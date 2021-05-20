@@ -8,7 +8,7 @@ import java.awt.event.*;
 import java.awt.*;
 
 public class MainMenu extends JFrame {
-    private static ImageIcon titileIcon = new ImageIcon("game/src/view/pics/Maintitle.png");
+    private static ImageIcon titleIcon = new ImageIcon("game/src/view/pics/Maintitle.png");
     private static ImageIcon playSound = new ImageIcon("game/src/view/pics/play.png");
     private static JButton newGameBtn = new JButton(new ImageIcon("game/src/view/pics/NewGame.png"));
     private static JButton loadGameBtn = new JButton(new ImageIcon("game/src/view/pics/LoadGame.png"));
@@ -19,8 +19,8 @@ public class MainMenu extends JFrame {
         if (!MainMenuPlayer.getIsPlaying())
             MainMenuPlayer.play();
         playSound.setImage(playSound.getImage().getScaledInstance(50, 50, Image.SCALE_DEFAULT));
-        titileIcon.setImage(titileIcon.getImage().getScaledInstance(700, 690, Image.SCALE_DEFAULT));
-        JLabel mainTitleLabel = new JLabel(titileIcon);
+        titleIcon.setImage(titleIcon.getImage().getScaledInstance(700, 690, Image.SCALE_DEFAULT));
+        JLabel mainTitleLabel = new JLabel(titleIcon);
         setSize(1000, 700);
         setTitle("MineSweeper v1.0");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
