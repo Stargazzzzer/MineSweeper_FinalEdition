@@ -159,7 +159,14 @@ public class Loader implements InputListener, Listenable<GameStatusListener> {
         if (type == ClickType.LEFT_CLICK) {
             boolean temp = gameBoard.clickSquare(x, y);
             while (gameBoard.isError()) {
-                onGameRestart();
+                index = 0;
+                counter = 0;
+                for (int i = 0; i < playerlist.length; i++) {
+                    playerlist[i].reset();
+                }
+                gameFrame.getScoreBoard().resetScoreBoard();
+                gameStatus = GameStatus.PROGRESSING;
+                gameBoard.init(row, column, mineNum);
                 temp = gameBoard.clickSquare(x, y);
             }
             if (Board.isLastMoveValid) {
